@@ -1,0 +1,185 @@
+[
+  {
+    "id": "S01",
+    "name": "Alice Martin",
+    "current_level": "bac+3",
+    "skills": [
+      {"domain": "informatique", "level": "advanced", "grade": 16},
+      {"domain": "mathematiques", "level": "intermediate", "grade": 14},
+      {"domain": "physique", "level": "beginner", "grade": 12}
+    ],
+    "interests": ["intelligence artificielle", "machine learning", "recherche"],
+    "constraints": {
+      "max_budget": 5000,
+      "max_duration_months": 24,
+      "preferred_location": "Paris",
+      "requires_english": false,
+      "remote_only": false
+    },
+    "free_text": "Étudiante en informatique passionnée par l'IA. Je veux faire de la recherche. Budget limité mais je peux travailler à côté."
+  },
+  {
+    "id": "S02",
+    "name": "Benjamin Dupont",
+    "current_level": "bac+3",
+    "skills": [
+      {"domain": "biologie", "level": "advanced", "grade": 15},
+      {"domain": "informatique", "level": "beginner", "grade": 10},
+      {"domain": "mathematiques", "level": "intermediate", "grade": 13}
+    ],
+    "interests": ["data science", "bioinformatique", "recherche médicale"],
+    "constraints": {
+      "max_budget": 1000,
+      "max_duration_months": 24,
+      "preferred_location": null,
+      "requires_english": false,
+      "remote_only": false
+    },
+    "free_text": "Diplômé en biologie, je veux me spécialiser en bioinformatique. J'ai quelques bases en Python."
+  },
+  {
+    "id": "S03",
+    "name": "Camille Rousseau",
+    "current_level": "bac",
+    "skills": [
+      {"domain": "informatique", "level": "none", "grade": null},
+      {"domain": "design", "level": "beginner", "grade": 14},
+      {"domain": "marketing", "level": "beginner", "grade": 13}
+    ],
+    "interests": ["design", "création", "web", "marketing digital"],
+    "constraints": {
+      "max_budget": 8000,
+      "max_duration_months": 12,
+      "preferred_location": "Paris",
+      "requires_english": false,
+      "remote_only": false
+    },
+    "free_text": "Bac général, très créative. Je veux travailler dans le design ou le marketing digital. Pas de background technique."
+  },
+  {
+    "id": "S04",
+    "name": "Profil vide",
+    "current_level": "",
+    "skills": [],
+    "interests": [],
+    "constraints": {
+      "max_budget": null,
+      "max_duration_months": null,
+      "preferred_location": null,
+      "requires_english": false,
+      "remote_only": false
+    },
+    "free_text": null
+  },
+  {
+    "id": "S05",
+    "name": "Elena Moretti",
+    "current_level": "bac+5",
+    "skills": [
+      {"domain": "informatique", "level": "expert", "grade": 18},
+      {"domain": "mathematiques", "level": "advanced", "grade": 17},
+      {"domain": "design", "level": "intermediate", "grade": 15}
+    ],
+    "interests": ["intelligence artificielle", "design", "création artistique", "musique"],
+    "constraints": {
+      "max_budget": 30000,
+      "max_duration_months": 12,
+      "preferred_location": "Paris",
+      "requires_english": true,
+      "remote_only": false
+    },
+    "free_text": "Profile atypique : double competence informatique et arts. Je veux explorer l'IA créative (génération musicale, art IA)."
+  },
+  {
+    "id": "S06",
+    "name": "François Leroy",
+    "current_level": "bac+2",
+    "skills": [
+      {"domain": "informatique", "level": "intermediate", "grade": 11},
+      {"domain": "mathematiques", "level": "beginner", "grade": 9}
+    ],
+    "interests": ["gestion", "informatique"],
+    "constraints": {
+      "max_budget": 0,
+      "max_duration_months": 24,
+      "preferred_location": null,
+      "requires_english": false,
+      "remote_only": false
+    },
+    "free_text": "DUT informatique mais envie de bifurquer vers la gestion. Budget très limité."
+  },
+  {
+    "id": "S07",
+    "name": "Hana Nakamura",
+    "current_level": "bac+3",
+    "skills": [
+      {"domain": "informatique", "level": "intermediate", "grade": 14},
+      {"domain": "mathematiques", "level": "advanced", "grade": 16},
+      {"domain": "physique", "level": "intermediate", "grade": 14}
+    ],
+    "interests": ["data science", "statistiques", "finance"],
+    "constraints": {
+      "max_budget": 10000,
+      "max_duration_months": 36,
+      "preferred_location": "Paris",
+      "requires_english": false,
+      "remote_only": false
+    },
+    "free_text": "Étrangère, je parle bien français. Licence de maths, je veux me spécialiser en data science pour la finance."
+  },
+  {
+    "id": "S08",
+    "name": "Ibrahim Diallo",
+    "current_level": "bac",
+    "skills": [
+      {"domain": "informatique", "level": "none", "grade": null}
+    ],
+    "interests": ["informatique", "développement web"],
+    "constraints": {
+      "max_budget": 600,
+      "max_duration_months": 12,
+      "preferred_location": null,
+      "requires_english": false,
+      "remote_only": true
+    },
+    "free_text": "Sans diplôme supérieur mais motivé. Je veux apprendre à coder. Doit être à distance et pas cher."
+  },
+  {
+    "id": "S09",
+    "name": "Juliette Bernard",
+    "current_level": "bac+4",
+    "skills": [
+      {"domain": "psychologie", "level": "advanced", "grade": 16},
+      {"domain": "informatique", "level": "beginner", "grade": 10},
+      {"domain": "mathematiques", "level": "intermediate", "grade": 12}
+    ],
+    "interests": ["psychologie cognitive", "neurosciences", "intelligence artificielle"],
+    "constraints": {
+      "max_budget": 2000,
+      "max_duration_months": 24,
+      "preferred_location": "Bordeaux",
+      "requires_english": false,
+      "remote_only": false
+    },
+    "free_text": "Master 1 psychologie, je veux m'orienter vers la recherche en cognitive science / IA. Je suis prête à suivre des cours de rattrapage en info."
+  },
+  {
+    "id": "S10",
+    "name": "Karim Benali",
+    "current_level": "bac+3",
+    "skills": [
+      {"domain": "informatique", "level": "beginner", "grade": 8},
+      {"domain": "mathematiques", "level": "beginner", "grade": 7},
+      {"domain": "physique", "level": "beginner", "grade": 8}
+    ],
+    "interests": ["intelligence artificielle", "science fiction", "philosophie"],
+    "constraints": {
+      "max_budget": 20000,
+      "max_duration_months": 24,
+      "preferred_location": null,
+      "requires_english": true,
+      "remote_only": false
+    },
+    "free_text": "Licence-info avec des notes médiocres mais je suis passionné par l'IA théorique. Je veux une école prestigieuse, peu importe le coût."
+  }
+]

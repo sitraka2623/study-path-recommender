@@ -1,0 +1,126 @@
+{
+  "rules": [
+    {
+      "id": "R01",
+      "name": "Prérequis obligatoires",
+      "description": "Un étudiant doit satisfaire tous les prérequis obligatoires d'une formation",
+      "type": "constraint",
+      "severity": "hard",
+      "condition": "ALL required_prerequisites_met",
+      "action": "reject_if_not_met",
+      "weight": 1.0
+    },
+    {
+      "id": "R02",
+      "name": "Budget maximum",
+      "description": "Le coût de la formation ne doit pas dépasser le budget de l'étudiant",
+      "type": "constraint",
+      "severity": "hard",
+      "condition": "program.cost <= student.constraints.max_budget",
+      "action": "reject_if_not_met",
+      "weight": 1.0
+    },
+    {
+      "id": "R03",
+      "name": "Durée maximum",
+      "description": "La durée de la formation ne doit pas dépasser la durée maximale souhaitée",
+      "type": "constraint",
+      "severity": "hard",
+      "condition": "program.duration_months <= student.constraints.max_duration_months",
+      "action": "reject_if_not_met",
+      "weight": 1.0
+    },
+    {
+      "id": "R04",
+      "name": "Correspondance domaine-intérêts",
+      "description": "Bonus si le domaine de la formation correspond aux intérêts de l'étudiant",
+      "type": "preference",
+      "severity": "soft",
+      "condition": "program.domain IN student.interests",
+      "action": "boost_score",
+      "weight": 0.8
+    },
+    {
+      "id": "R05",
+      "name": "Niveau académique suffisant",
+      "description": "Le niveau de l'étudiant doit être compatible avec le type de formation",
+      "type": "constraint",
+      "severity": "soft",
+      "condition": "student_level >= program_min_level",
+      "action": "penalize_if_not_met",
+      "weight": 0.5
+    },
+    {
+      "id": "R06",
+      "name": "Localisation préférée",
+      "description": "Bonus si la formation est dans la localisation préférée",
+      "type": "preference",
+      "severity": "soft",
+      "condition": "program.location == student.constraints.preferred_location",
+      "action": "boost_score",
+      "weight": 0.3
+    },
+    {
+      "id": "R07",
+      "name": "Formation à distance",
+      "description": "Bonus si l'étudiant demande du remote et que la formation l'est",
+      "type": "preference",
+      "severity": "soft",
+      "condition": "student.constraints.remote_only AND program.is_remote",
+      "action": "boost_score",
+      "weight": 0.4
+    },
+    {
+      "id": "R08",
+      "name": "Compétences enseignées pertinentes",
+      "description": "Score proportionnel au nombre de compétences enseignées qui matchent les intérêts",
+      "type": "preference",
+      "severity": "soft",
+      "condition": "overlap(program.skills_taught, student.interests)",
+      "action": "boost_score",
+      "weight": 0.6
+    },
+    {
+      "id": "R09",
+      "name": "Taux de satisfaction",
+      "description": "Bonus pour les formations avec un taux de satisfaction élevé",
+      "type": "preference",
+      "severity": "soft",
+      "condition": "program.satisfaction_rate >= 80",
+      "action": "boost_score",
+      "weight": 0.2
+    },
+    {
+      "id": "R10",
+      "name": "Formation langues étrangères",
+      "description": "Pénalité si la formation est en anglais et que l'étudiant ne le demande pas",
+      "type": "preference",
+      "severity": "soft",
+      "condition": "program.language == 'anglais' AND NOT student.constraints.requires_english",
+      "action": "penalize_if_not_met",
+      "weight": 0.3
+    }
+  ],
+  "level_mapping": {
+    "licence": 0,
+    "diplome_pro": 0,
+    "bootcamp": 0,
+    "certificat": 0,
+    "master": 1,
+    "mba": 1,
+    "diplome_ingenieur": 1,
+    "doctorat": 2
+  },
+  "student_level_ranking": {
+    "sans_diplome": 0,
+    "bac": 1,
+    "bac+1": 2,
+    "bac+2": 3,
+    "bac+3": 4,
+    "licence": 4,
+    "bac+4": 5,
+    "bac+5": 6,
+    "master": 6,
+    "doctorat": 7
+  }
+}

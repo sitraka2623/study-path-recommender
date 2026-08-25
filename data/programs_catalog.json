@@ -1,0 +1,234 @@
+[
+  {
+    "id": "P01",
+    "name": "Master Intelligence Artificielle",
+    "institution": "Université Paris-Saclay",
+    "domain": "intelligence_artificielle",
+    "program_type": "master",
+    "duration_months": 24,
+    "cost": 243,
+    "location": "Paris",
+    "is_remote": false,
+    "language": "français",
+    "prerequisites": [
+      {"domain": "informatique", "min_level": "intermediate", "required": true, "weight": 0.8},
+      {"domain": "mathematiques", "min_level": "intermediate", "required": true, "weight": 0.6}
+    ],
+    "skills_taught": ["Machine Learning", "Deep Learning", "NLP", "Vision par ordinateur", "Reinforcement Learning"],
+    "career_outcomes": ["Ingénieur IA", "Data Scientist", "Chercheur en IA"],
+    "satisfaction_rate": 88,
+    "description": "Formation d'excellence en IA avec forte composante recherche. Programmes en partenariat avec le CNRS et des laboratoires internationaux."
+  },
+  {
+    "id": "P02",
+    "name": "MSc Data Science & AI",
+    "institution": "HEC Paris",
+    "domain": "data_science",
+    "program_type": "master",
+    "duration_months": 18,
+    "cost": 25000,
+    "location": "Paris",
+    "is_remote": false,
+    "language": "français",
+    "prerequisites": [
+      {"domain": "informatique", "min_level": "beginner", "required": true, "weight": 0.5},
+      {"domain": "mathematiques", "min_level": "intermediate", "required": true, "weight": 0.7}
+    ],
+    "skills_taught": ["Data Analysis", "Machine Learning", "Business Intelligence", "Stratégie data"],
+    "career_outcomes": ["Consultant Data", "Chef de projet Data", "Data Product Manager"],
+    "satisfaction_rate": 85,
+    "description": "Double compétence technique et business. Orientation management de la donnée."
+  },
+  {
+    "id": "P03",
+    "name": "Licence Informatique",
+    "institution": "Université de Strasbourg",
+    "domain": "informatique",
+    "program_type": "licence",
+    "duration_months": 36,
+    "cost": 170,
+    "location": "Strasbourg",
+    "is_remote": false,
+    "language": "français",
+    "prerequisites": [
+      {"domain": "informatique", "min_level": "beginner", "required": false, "weight": 0.3},
+      {"domain": "mathematiques", "min_level": "beginner", "required": true, "weight": 0.5}
+    ],
+    "skills_taught": ["Programmation", "Algorithmique", "Bases de données", "Réseaux", "POO"],
+    "career_outcomes": ["Développeur", "Administrateur systèmes", "Continue vers Master"],
+    "satisfaction_rate": 72,
+    "description": "Formation généraliste en informatique avec stages en entreprise possibles."
+  },
+  {
+    "id": "P04",
+    "name": "Bootcamp Data Science 12 semaines",
+    "institution": "Le Wagon",
+    "domain": "data_science",
+    "program_type": "bootcamp",
+    "duration_months": 3,
+    "cost": 7900,
+    "location": "Paris",
+    "is_remote": true,
+    "language": "français",
+    "prerequisites": [
+      {"domain": "informatique", "min_level": "beginner", "required": false, "weight": 0.2}
+    ],
+    "skills_taught": ["Python", "SQL", "Machine Learning", "Data Visualization"],
+    "career_outcomes": ["Data Analyst", "Junior Data Scientist"],
+    "satisfaction_rate": 82,
+    "description": "Formation intensive pratique. Idéal pour les reconversions rapides."
+  },
+  {
+    "id": "P05",
+    "name": "MBA Marketing Digital",
+    "institution": "ESSEC",
+    "domain": "marketing",
+    "program_type": "mba",
+    "duration_months": 12,
+    "cost": 42000,
+    "location": "Cergy",
+    "is_remote": false,
+    "language": "français",
+    "prerequisites": [
+      {"domain": "gestion", "min_level": "intermediate", "required": true, "weight": 0.6}
+    ],
+    "skills_taught": ["Stratégie digitale", "SEO/SEA", "Growth Hacking", "Data Marketing"],
+    "career_outcomes": ["Directeur Marketing", "CMO", "Consultant Digital"],
+    "satisfaction_rate": 91,
+    "description": "MBA orienté marketing digital avec projets en entreprise."
+  },
+  {
+    "id": "P06",
+    "name": "Licence de Droit",
+    "institution": "Université Paris 1 Panthéon-Sorbonne",
+    "domain": "droit",
+    "program_type": "licence",
+    "duration_months": 36,
+    "cost": 170,
+    "location": "Paris",
+    "is_remote": false,
+    "language": "français",
+    "prerequisites": [],
+    "skills_taught": ["Droit civil", "Droit pénal", "Droit commercial", "Procédures"],
+    "career_outcomes": ["Juriste", "Avocat (après BAR)", "Notaire (après DIPL)"],
+    "satisfaction_rate": 70,
+    "description": "Formation classique en droit avec spécialisation possible en M2."
+  },
+  {
+    "id": "P07",
+    "name": "Master Informatique - Génie Logiciel",
+    "institution": "Université de Lyon 1",
+    "domain": "informatique",
+    "program_type": "master",
+    "duration_months": 24,
+    "cost": 243,
+    "location": "Lyon",
+    "is_remote": false,
+    "language": "français",
+    "prerequisites": [
+      {"domain": "informatique", "min_level": "advanced", "required": true, "weight": 0.9},
+      {"domain": "mathematiques", "min_level": "intermediate", "required": true, "weight": 0.5}
+    ],
+    "skills_taught": ["Architecture logicielle", "DevOps", "Méthodes agiles", "Cloud", "Sécurité"],
+    "career_outcomes": ["Architecte logiciel", "Tech Lead", "Ingénieur DevOps"],
+    "satisfaction_rate": 83,
+    "description": "Formation approfondie en génie logiciel avec projets industriels."
+  },
+  {
+    "id": "P08",
+    "name": "Formation Développeur Web Full Stack",
+    "institution": "OpenClassrooms",
+    "domain": "informatique",
+    "program_type": "certificat",
+    "duration_months": 6,
+    "cost": 499,
+    "location": "En ligne",
+    "is_remote": true,
+    "language": "français",
+    "prerequisites": [
+      {"domain": "informatique", "min_level": "beginner", "required": false, "weight": 0.1}
+    ],
+    "skills_taught": ["HTML/CSS", "JavaScript", "React", "Node.js", "MongoDB"],
+    "career_outcomes": ["Développeur Web", "Freelance"],
+    "satisfaction_rate": 78,
+    "description": "Formation en ligne avec mentor dédié. Projet final avec entreprise."
+  },
+  {
+    "id": "P09",
+    "name": "Diplôme d'Ingénieur - Statistique et Data Science",
+    "institution": "ENSAE Paris",
+    "domain": "data_science",
+    "program_type": "diplome_ingenieur",
+    "duration_months": 36,
+    "cost": 500,
+    "location": "Paris",
+    "is_remote": false,
+    "language": "français",
+    "prerequisites": [
+      {"domain": "mathematiques", "min_level": "advanced", "required": true, "weight": 0.9},
+      {"domain": "informatique", "min_level": "intermediate", "required": true, "weight": 0.6},
+      {"domain": "physique", "min_level": "beginner", "required": false, "weight": 0.2}
+    ],
+    "skills_taught": ["Statistiques avancées", "Modélisation", "Économétrie", "Big Data", "IA"],
+    "career_outcomes": ["Statisticien", "Data Scientist", "Actuaire", "Économiste"],
+    "satisfaction_rate": 90,
+    "description": "Grande école d'ingénieurs spécialisée en statistiques. Admissions sur concours."
+  },
+  {
+    "id": "P10",
+    "name": "Certificat UX/UI Design",
+    "institution": "Google (Coursera)",
+    "domain": "design",
+    "program_type": "certificat",
+    "duration_months": 3,
+    "cost": 39,
+    "location": "En ligne",
+    "is_remote": true,
+    "language": "anglais",
+    "prerequisites": [
+      {"domain": "design", "min_level": "none", "required": false, "weight": 0.0}
+    ],
+    "skills_taught": ["UX Research", "Wireframing", "Prototyping", "Figma", "Design Thinking"],
+    "career_outcomes": ["UX Designer", "UI Designer", "Product Designer"],
+    "satisfaction_rate": 87,
+    "description": "Certificat Google reconnu mondialement. Pas de prérequis."
+  },
+  {
+    "id": "P11",
+    "name": "Licence Psychologie",
+    "institution": "Université de Bordeaux",
+    "domain": "psychologie",
+    "program_type": "licence",
+    "duration_months": 36,
+    "cost": 170,
+    "location": "Bordeaux",
+    "is_remote": false,
+    "language": "français",
+    "prerequisites": [],
+    "skills_taught": ["Psychologie générale", "Neurosciences", "Statistiques", "Méthodologie recherche"],
+    "career_outcomes": ["Continue Master Psycho", "Assistant de direction", "RH"],
+    "satisfaction_rate": 74,
+    "description": "Formation en psychologie avec stages en milieu hospitalier possible."
+  },
+  {
+    "id": "P12",
+    "name": "Master Bioinformatique",
+    "institution": "Université de Montpellier",
+    "domain": "biologie",
+    "program_type": "master",
+    "duration_months": 24,
+    "cost": 243,
+    "location": "Montpellier",
+    "is_remote": false,
+    "language": "français",
+    "prerequisites": [
+      {"domain": "biologie", "min_level": "intermediate", "required": true, "weight": 0.7},
+      {"domain": "informatique", "min_level": "beginner", "required": true, "weight": 0.5},
+      {"domain": "mathematiques", "min_level": "beginner", "required": false, "weight": 0.3}
+    ],
+    "skills_taught": ["Génomique", "Transcriptomique", "Python/R", "Biostatistiques", "Machine Learning appliqué"],
+    "career_outcomes": ["Bioinformaticien", "Chercheur", "Ingénieur R&D pharma"],
+    "satisfaction_rate": 81,
+    "description": "Intersection biologie et informatique. Forte composante recherche."
+  }
+]
