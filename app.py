@@ -371,22 +371,32 @@ def display_recommendations(result, engine_name: str):
 
     for i, rec in enumerate(result.recommendations):
         rank_class = "top" if i == 0 else ""
-        score_pct = rec.final_score * 100
+        score_pct = getattr(rec, 'final_score', rec.confidence) * 100
         badge_class = "high" if score_pct >= 60 else "mid" if score_pct >= 35 else "low"
 
-        tags_html = ""
-        tags_html += f'<span class="tag domain">{rec.program.domain.value}</span>'
-        tags_html += f'<span class="tag cost">{rec.program.cost} EUR</span>'
-        tags_html += f'<span class="tag duration">{rec.program.duration_months} mois</span>'
-        tags_html += f'<span class="tag location">{rec.program.location}</span>'
+        program = getattr(rec, 'program', None)
+        if program is None:
+            pid = getattr(rec, 'program_id', None)
+            program = next((p for p in PROGRAMS if p.id == pid), None)
 
+        pname = getattr(program, 'name', None) or getattr(rec, 'program_name', '?')
+        institution = getattr(program, 'institution', '') if program else ''
+
+        tags_html = ""
+        if program:
+            tags_html += f'<span class="tag domain">{program.domain.value}</span>'
+            tags_html += f'<span class="tag cost">{program.cost} EUR</span>'
+            tags_html += f'<span class="tag duration">{program.duration_months} mois</span>'
+            tags_html += f'<span class="tag location">{program.location}</span>'
+
+        disagreements = getattr(rec, 'disagreements', None)
         disagreements_html = ""
-        if rec.disagreements:
-            items = "".join(f"<li>{d}</li>" for d in rec.disagreements)
+        if disagreements:
+            items = "".join(f"<li>{d}</li>" for d in disagreements)
             disagreements_html = f'<div style="margin-top:10px;padding:10px 14px;background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.25);border-radius:6px;font-size:0.85rem;color:var(--warning);"><strong style="color:var(--warning);">Attention :</strong><ul style="margin:4px 0 0 0;padding-left:18px;color:var(--text-muted);">{items}</ul></div>'
 
-        rule_bar = max(0, min(100, rec.rule_score * 100))
-        llm_bar = max(0, min(100, rec.llm_score * 100))
+        rule_bar = max(0, min(100, getattr(rec, 'rule_score', 0) * 100))
+        llm_bar = max(0, min(100, getattr(rec, 'llm_score', rec.confidence) * 100))
         conf_bar = max(0, min(100, rec.confidence * 100))
 
         html = f"""
@@ -394,10 +404,10 @@ def display_recommendations(result, engine_name: str):
             <div style="display:flex;justify-content:space-between;align-items:flex-start;">
                 <div>
                     <span style="font-size:1.1rem;font-weight:700;color:var(--primary-light);">
-                        {'#' if i == 0 else '#' + str(i+1)} {rec.program.name}
+                        {'#' if i == 0 else '#' + str(i+1)} {pname}
                     </span>
                     <div style="color:var(--text-muted);font-size:0.88rem;margin-top:2px;">
-                        {rec.program.institution}
+                        {institution}
                     </div>
                 </div>
                 <span class="score-badge {badge_class}">{score_pct:.0f}/100</span>
